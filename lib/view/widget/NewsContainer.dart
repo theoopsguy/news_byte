@@ -24,11 +24,13 @@ class NewsContainer extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network(
+            FadeInImage.assetNetwork(
                 height: 400,
                 width: MediaQuery.of(context).size.width,
                 fit: BoxFit.cover,
-                imgUrl),
+                placeholder:
+                    "assets/placeholder.png",
+                image: imgUrl),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Column(
