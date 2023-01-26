@@ -12,6 +12,14 @@ class DetailedViewScreen extends StatefulWidget {
 }
 
 class _DetailedViewScreenState extends State<DetailedViewScreen> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    setState(() {
+      widget.newsUrl = widget.newsUrl.contains('http:') ? widget.newsUrl.replaceAll('http:', 'https:') : widget.newsUrl;
+    });
+  }
   final Completer<WebViewController> _controller =
       Completer<WebViewController>();
   @override
