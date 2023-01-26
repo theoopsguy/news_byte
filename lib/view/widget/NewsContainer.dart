@@ -57,7 +57,9 @@ class NewsContainer extends StatelessWidget {
                     Text(
                       newsContent.length > 300
                           ? '${newsContent.toString().substring(0, 300)}...'
-                          : '${newsContent.toString().substring(0, newsContent.length - 15)}...',
+                          : newsContent.length > 15
+                              ? '${newsContent.toString().substring(0, newsContent.length - 15)}...'
+                              : newsContent,
                       style: TextStyle(fontSize: 16),
                     ),
                   ]),
@@ -68,7 +70,12 @@ class NewsContainer extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> DetailedViewScreen(newsUrl: newsUrl,)));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DetailedViewScreen(
+                                    newsUrl: newsUrl,
+                                  )));
                     },
                     child: Text('Read More')),
               ),
