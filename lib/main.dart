@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_byte/view/home.dart';
 import 'package:news_byte/view/splash.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,6 +26,7 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     // TODO: implement initState
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [SystemUiOverlay.bottom]);
     super.initState();
     LoadHome();
   }
