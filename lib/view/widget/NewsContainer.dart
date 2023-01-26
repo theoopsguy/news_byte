@@ -18,6 +18,10 @@ class NewsContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    convertDate(dateData){
+      var date = DateTime.parse(dateData);
+      return '${date.day}-${date.month}-${date.year} ${date.hour}:${date.minute}';
+    }
     return Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
@@ -50,7 +54,7 @@ class NewsContainer extends StatelessWidget {
                       height: 6,
                     ),
                     Text(
-                      publishedAt,
+                      convertDate(publishedAt),
                       style: TextStyle(fontSize: 12, color: Colors.black54),
                     ),
                     SizedBox(
