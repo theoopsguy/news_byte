@@ -4,12 +4,16 @@ class NewsContainer extends StatelessWidget {
   String imgUrl;
   String newsTitle;
   String newsDescription;
+  String newsContent;
   String newsUrl;
+  String publishedAt;
   NewsContainer(
       {super.key,
       required this.imgUrl,
       required this.newsTitle,
       required this.newsDescription,
+      required this.newsContent,
+      required this.publishedAt,
       required this.newsUrl});
 
   @override
@@ -39,11 +43,25 @@ class NewsContainer extends StatelessWidget {
                           TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
-                      height: 8,
+                      height: 2,
+                    ),
+                    Text(
+                      publishedAt,
+                      style: TextStyle(fontSize: 10, color: Colors.black38),
+                    ),
+                    SizedBox(
+                      height: 4,
                     ),
                     Text(
                       newsDescription,
-                      style: TextStyle(fontSize: 18),
+                      style: TextStyle(fontSize: 12, color: Colors.black45),
+                    ),
+                    SizedBox(
+                      height: 2,
+                    ),
+                    Text(
+                      newsContent,
+                      style: TextStyle(fontSize: 16),
                     ),
                   ]),
             ),
