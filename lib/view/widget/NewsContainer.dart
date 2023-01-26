@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class NewsContainer extends StatelessWidget {
   String imgUrl;
   String newsTitle;
-  String newsDescription;
   String newsContent;
   String newsUrl;
   String publishedAt;
@@ -11,7 +10,6 @@ class NewsContainer extends StatelessWidget {
       {super.key,
       required this.imgUrl,
       required this.newsTitle,
-      required this.newsDescription,
       required this.newsContent,
       required this.publishedAt,
       required this.newsUrl});
@@ -35,32 +33,29 @@ class NewsContainer extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(
-                      height: 10,
+                      height: 12,
                     ),
                     Text(
-                      newsTitle,
+                      newsTitle.length > 140
+                          ? '${newsTitle.toString().substring(0, 140)}...'
+                          : newsTitle,
                       style:
                           TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
-                      height: 2,
+                      height: 6,
                     ),
                     Text(
                       publishedAt,
-                      style: TextStyle(fontSize: 10, color: Colors.black38),
+                      style: TextStyle(fontSize: 12, color: Colors.black54),
                     ),
                     SizedBox(
-                      height: 4,
+                      height: 6,
                     ),
                     Text(
-                      newsDescription,
-                      style: TextStyle(fontSize: 12, color: Colors.black45),
-                    ),
-                    SizedBox(
-                      height: 2,
-                    ),
-                    Text(
-                      newsContent,
+                      newsContent.length > 300
+                          ? '${newsContent.toString().substring(0, 300)}...'
+                          : '${newsContent.toString().substring(0, newsContent.length - 15)}...',
                       style: TextStyle(fontSize: 16),
                     ),
                   ]),

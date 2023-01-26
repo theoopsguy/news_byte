@@ -8,25 +8,11 @@ class GetNews{
     static List sources = [
     "the-hindu",
     "the-times-of-india",
-    "abc-news",
-    "bbc-news",
-    "bbc-sport",
-    "business-insider",
-    "engadget",
-    "espn",
-    "espn-cric-info",
-    "financial-post",
-    "fox-news",
-    "google-news",
     "google-news-in",
-    "national-geographic",
-    "news24",
+    "google-news",
+    "bbc-news",
     "techcrunch",
     "techradar",
-    "the-wall-street-journal",
-    "the-washington-times",
-    "time",
-    "usa-today",
   ];
   static Future<NewsArticle> getNews() async{
     final random = new Random();

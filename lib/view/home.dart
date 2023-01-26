@@ -41,8 +41,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 newsContent:
                     news.newsContent,
                 publishedAt: news.publishedAt, 
-                newsDescription:
-                    news.newsDescription,
                 newsUrl:
                     news.newsUrl);
           }),
