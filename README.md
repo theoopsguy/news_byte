@@ -28,12 +28,12 @@ flutter run
 * webview_flutter package is used to display the full article inside the app
 
 ## Demo
+Video Demo: https://www.youtube.com/shorts/4qb6eVxnt6M
+
+
 <img src="https://github.com/theoopsguy/news_byte/blob/main/assets/screenshot0.png?raw=true" width="227.36" height="480">
 <img src="https://github.com/theoopsguy/news_byte/blob/main/assets/screenshot1.png?raw=true" width="227.36" height="480">
 <img src="https://github.com/theoopsguy/news_byte/blob/main/assets/screenshot2.png?raw=true" width="227.36" height="480">
-
-<iframe width="480" height="227.36" src="https://www.youtube.com/embed/4qb6eVxnt6M?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 ## Acknowledgements
 * NewsAPI for providing the news data
